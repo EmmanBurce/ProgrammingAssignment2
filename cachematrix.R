@@ -1,21 +1,25 @@
-# Functions to compute the inverse of a matrix with caching.
+## Put comments here that give an overall description of what your
+## functions do
 
-# Caching function for a matrix argument.
+## the function makeCacheMatrix role is to handele with matrix x, store inverse matrix I and cache it. 
+## By calling the set function the inverse matrix I is erased and after calculation replace by new  value.
 
 makeCacheMatrix <- function(x=matrix()){
-  inv <- NULL
-  set <- function(y){
+  inv <- NULL                        
+  set <- function(y){               
     x <<- y
     inv <<- NULL
   }
-  get <- function() {x}
-  setInverse <- function(inverse) {inv <<- inverse}
+  get <- function() {x}                                   
+  setInverse <- function(inverse) {inv <<- inverse}   
   getInverse <- function() {inv}
   list(set = set, get = get, setInverse = setInverse, getInverse = getInverse) 
 }
 
 
-# Calculates the inverse of an assumed square matrix.
+## this fuction calculates the inverse of an assumed square matrix or retrieves
+## or retrieves a previously calculated inverse from cache wheen given a list argument
+## from the function makeCacheMatrix().
 
 cacheSolve <- function(x, ...){
   inv <- x$getInverse()
