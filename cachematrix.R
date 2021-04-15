@@ -1,8 +1,5 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## the function makeCacheMatrix role is to handele with matrix x, store inverse matrix I and cache it. 
-## By calling the set function the inverse matrix I is erased and after calculation replace by new  value.
+## the function makeCacheMatrix role is to handele with matrix x, store inverse matrix and cache it. 
+## By calling the set function the inverse matrix is erased and after calculation replace by new  value.
 
 makeCacheMatrix <- function(x=matrix()){
   inv <- NULL                        
@@ -18,8 +15,7 @@ makeCacheMatrix <- function(x=matrix()){
 
 
 ## this fuction calculates the inverse of an assumed square matrix or retrieves
-## or retrieves a previously calculated inverse from cache wheen given a list argument
-## from the function makeCacheMatrix().
+## a previously calculated inverse from cache wheen given a list argument.
 
 cacheSolve <- function(x, ...){
   inv <- x$getInverse()
