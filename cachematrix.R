@@ -1,6 +1,6 @@
 ## For this assignment there are two functions created: The first is the
-## makeCacheMatrix and cacheSolve. These Two functions are used to generate
-## an object that can keeps a matrix and caches its inverse or opposite.
+## makeCacheMatrix and cacheSolve. These two functions are used to generate
+## an object that can keep a matrix and caches its inverse or opposite.
 
 ## the first function makeCacheMatrix generates a matrix which can then be
 ## be used to cache the inverse.
@@ -19,7 +19,7 @@ makeCacheMatrix <- function(x=matrix()){
 
 
 ## The second function is used to generate an inverse of the matrix that was obtained
-## through the makeCacheMatrix prior. In case where the inverse has already been 
+## through the makeCacheMatrix prior. In cases where the inverse has already been 
 ## computed, it will retrieve the inverse from the generated cache. 
 
 cacheSolve <- function(x, ...){     ## retrieves cache data        
